@@ -1,7 +1,7 @@
 import os
 import webbrowser
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QHBoxLayout, QLineEdit, QPushButton, QFileDialog, QListWidget, QListWidgetItem, QLabel, QMessageBox
-
+import subprocess
 import PyPDF2
 
 class PDFSearchApp(QMainWindow):
@@ -119,7 +119,7 @@ class PDFSearchApp(QMainWindow):
                 webbrowser.open(file_path, new=2)  # Membuka file dalam browser default
 
     def unduh_file(self):
-        # Implementasi fungsi unduh file di sini
+        subprocess.Popen(['python', 'download.py'])
         pass
 
 if __name__ == "__main__":
